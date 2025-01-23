@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SumateButton from "../components/sumate/SumateButton";
+import { Image } from "astro:assets";
+import Participate from "../assets/Participate.webp";
+---
+
+<Layout>
+  <title slot="title">Sumate! | Daniel Ximénez</title>
+  <main class="min-h-screen mt-14 lg:mt-28 md:mt-32">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-[#360f62]">
+      <div class="absolute inset-0">
+        <Image
+          src={Participate}
+          alt="Imagen de Campaña"
+          class="w-full h-full object-cover opacity-20"
+        />
+      </div>
+      <div class="relative container mx-auto px-4 h-full flex items-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white max-w-3xl">
+          ¡Sumate a la Campaña de Daniel Ximénez!
+        </h1>
+      </div>
+    </section>
+
+    <!-- Contenido de la Página -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="prose prose-lg max-w-none text-center">
+          <h2 class="text-4xl font-bold text-[#360f62] mb-8">
+            ¡Únete a Nosotros para Transformar Lavalleja!
+          </h2>
+
+          <p class="text-lg leading-relaxed mb-6">
+            La campaña de Daniel Ximénez es un proyecto abierto y en constante
+            construcción. Queremos que cada ciudadano tenga la oportunidad de
+            aportar ideas y participar activamente en la creación de un
+            Lavalleja próspero, moderno y sostenible. Tu voz es esencial para
+            lograr un cambio real y duradero.
+          </p>
+
+          <p class="text-lg leading-relaxed mb-6">
+            Creemos en la fuerza del colectivo y en la importancia de construir
+            juntos un futuro mejor. Este programa está diseñado para evolucionar
+            según las necesidades de nuestra sociedad, garantizando que siempre
+            esté alineado con los desafíos y oportunidades que enfrentamos.
+          </p>
+
+          <!-- Call to Action: Botón de Sumate -->
+          <SumateButton />
+
+          <div class="bg-[#360f62] text-[#ffde59] p-8 rounded-lg mt-12">
+            <h3 class="text-2xl font-bold mb-4">Compromiso con el Futuro</h3>
+            <p class="text-lg">
+              Este no es solo un proyecto político; es una misión de vida. Sé
+              que, unidos, podemos llevar a Lavalleja a ser el número uno en
+              Uruguay. Un Lavalleja de primera es posible, y comienza con
+              nosotros. ¡Hagámoslo realidad!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .prose h2 {
+    color: #360f62;
+  }
+
+  .prose h3 {
+    color: #ffde59;
+  }
+
+  /* Ajustes adicionales para la página */
+  section.relative {
+    background-image: url("/path/to/your/hero-image.webp"); /* Asegúrate de reemplazar con la ruta correcta */
+  }
+</style>

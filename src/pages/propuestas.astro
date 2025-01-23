@@ -1,0 +1,103 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import EconomiaImg from "../assets/EconomiaImg.webp";
+import PdfViewer from "../components/pdf/PdfViewer";
+---
+
+<Layout>
+  <title slot="title">Plataforma de Gobierno | Daniel Ximénez</title>
+  <main class="min-h-screen mt-14 lg:mt-28 md:mt-32">
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] bg-[#360f62]">
+      <div class="absolute inset-0">
+        <Image
+          src={EconomiaImg}
+          alt="Cerro Arequita"
+          class="w-full h-full object-cover opacity-20"
+        />
+      </div>
+      <div class="relative container mx-auto px-4 h-full flex items-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white max-w-3xl">
+          Plataforma de Gobierno de Daniel Ximénez
+        </h1>
+      </div>
+    </section>
+
+    <!-- Plataforma Content -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="prose prose-lg max-w-none">
+          <h2 class="text-4xl font-bold text-[#360f62] mb-8">
+            Nuestra Plataforma
+          </h2>
+
+          <p class="text-lg leading-relaxed mb-6">
+            La Plataforma de Gobierno de Daniel Ximénez está diseñada para
+            transformar Lavalleja en un departamento ejemplar, promoviendo
+            el desarrollo sostenible, la innovación y el bienestar de todos
+            sus habitantes.
+          </p>
+
+          <div
+            class="bg-gray-50 p-6 rounded-lg my-8 border-l-4 border-[#ffde59]"
+          >
+            <p class="text-xl font-semibold text-[#360f62]">
+              "Construyamos juntos un Lavalleja próspero y moderno para todos."
+            </p>
+          </div>
+
+          <!-- Nueva Sección de Participación -->
+          <section class="my-12 p-6 bg-[#f0f0f0] rounded-lg text-center">
+            <h3 class="text-3xl font-bold text-[#360f62] mb-4">
+              ¿Querés aportar ideas? ¿Querés participar?
+            </h3>
+            <p class="text-lg mb-6">
+              Este programa es abierto y está en constante construcción. Es una hoja de ruta diseñada para evolucionar según las necesidades de nuestra sociedad. Tu participación es clave para construir juntos un futuro mejor.
+            </p>
+            <a href="/contacto" class="inline-block bg-[#360f62] text-[#ffde59] px-6 py-3 rounded-full font-semibold hover:bg-[#2e0d57] transition">
+              + Sumate a la Campaña
+            </a>
+          </section>
+
+          <!-- Integración del Visualizador de PDF -->
+          <h3 class="text-2xl font-bold text-[#360f62] mt-12 mb-6">
+            Descarga la Plataforma Completa
+          </h3>
+          <PdfViewer client:load />
+
+          <div class="bg-[#360f62] text-[#ffde59] p-8 rounded-lg mt-12">
+            <h4 class="text-2xl font-bold mb-4">
+              Compromiso con el Futuro
+            </h4>
+            <p class="text-lg">
+              Este no es solo un proyecto político; es una misión de vida.
+              Sé que, unidos, podemos llevar a Lavalleja a ser el número uno
+              en Uruguay. Un Lavalleja de primera es posible, y comienza con
+              nosotros. ¡Hagámoslo realidad!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .prose h2 {
+    color: #360f62;
+  }
+
+  .prose h3 {
+    color: #360f62;
+  }
+
+  .prose h4 {
+    color: #ffde59;
+  }
+
+  /* Estilos para el botón */
+  a.inline-block {
+    transition: background-color 0.3s ease;
+  }
+</style>
