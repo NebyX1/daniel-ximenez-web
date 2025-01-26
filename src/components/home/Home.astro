@@ -5,6 +5,7 @@ import HomeSumate from "../../assets/banners/HomeSumate.webp";
 import HomePrograma from "../../assets/banners/HomePrograma.webp";
 import HomeGiana from "../../assets/banners/HomeGiana.webp";
 import HomeStreetSheriff from "../../assets/banners/HomeStreetSheriff.webp";
+import HomeKanban from "../../assets/banners/HomeKanban.webp";
 import styles from "../../styles/home.module.css";
 ---
 
@@ -55,7 +56,13 @@ import styles from "../../styles/home.module.css";
           loading="lazy"
         />
       </div>
-      <a href="https://giana-ai.streamlit.app/" target="_blank" class={styles.button}> Chatea con GIANA </a>
+      <a
+        href="https://giana-ai.streamlit.app/"
+        target="_blank"
+        class={styles.button}
+      >
+        Chatea con GIANA
+      </a>
 
       <!-- Componente Street Sheriff -->
       <section class={styles.finalSection}>
@@ -67,7 +74,32 @@ import styles from "../../styles/home.module.css";
             loading="lazy"
           />
         </div>
-        <a href="https://street-sheriff.netlify.app/" target="_blank" class={styles.button}> Conocé Street Sheriff </a>
+        <a
+          href="https://street-sheriff.netlify.app/"
+          target="_blank"
+          class={styles.button}
+        >
+          Conocé Street Sheriff
+        </a>
+      </section>
+
+      <!-- Componente Kanban Board -->
+      <section class={styles.finalSection}>
+        <div class={styles.imageContainer}>
+          <img
+            src={HomeKanban.src}
+            alt="Kanban Board"
+            class={styles.image}
+            loading="lazy"
+          />
+        </div>
+        <a
+          href="http://kanban-ximenez.penumbra.press/"
+          target="_blank"
+          class={styles.button}
+        >
+          Un Nuevo Sistema de Gestión
+        </a>
       </section>
 
       <!-- Script para las animaciones de scroll -->
