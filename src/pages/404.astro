@@ -4,67 +4,159 @@ import { Image } from "astro:assets";
 import NotFound from "../assets/NotFound.webp";
 import HomeButton from "../components/not-found/HomeButton.jsx";
 ---
+
 <Layout>
-  <title slot="title">Página No Encontrada | Daniel Ximénez</title>
+  <title slot="title">Página No Encontrada | Daniel Ximénez Intendente</title>
   <main class="min-h-screen mt-14 lg:mt-28 md:mt-32">
-    <!-- Hero Section -->
-    <section class="relative h-[60vh] bg-[#360f62]">
+    <!-- Hero Section Mejorado -->
+    <section
+      class="relative h-[70vh] bg-gradient-to-r from-[#1b2e45] to-[#253f5f] overflow-hidden"
+    >
       <div class="absolute inset-0">
         <Image
           src={NotFound}
           alt="Imagen de Campaña"
-          class="w-full h-full object-cover opacity-20"
+          class="w-full h-full object-cover opacity-25 scale-105 hover:scale-110 transition-transform duration-700"
         />
       </div>
-      <div class="relative container mx-auto px-4 h-full flex items-center">
-        <h1 class="text-5xl md:text-7xl font-bold text-white max-w-3xl">
-          ¡Upss... Parece que te perdiste!
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-[#253f5f]/80 via-transparent to-transparent"
+      >
+      </div>
+      <div
+        class="relative container mx-auto px-6 h-full flex flex-col justify-center"
+      >
+        <h1
+          class="text-5xl md:text-7xl font-bold text-white max-w-3xl leading-tight"
+        >
+          <span class="text-[#ffde59]">¡Upss...</span> Parece que te perdiste!
         </h1>
+        <p class="text-xl md:text-2xl text-white/90 mt-4 max-w-2xl">
+          Error 404 - Página no encontrada
+        </p>
       </div>
     </section>
 
-    <!-- Contenido de la Página -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="prose prose-lg max-w-none text-center">
-          <h2 class="text-4xl font-bold text-[#360f62] mb-8">
+    <!-- Contenido de la Página Mejorado -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2
+            class="text-4xl md:text-5xl font-bold text-[#253f5f] mb-10 text-center relative"
+          >
             ¡No te preocupes, te ayudamos a encontrar el camino!
+            <span class="block h-1 w-24 bg-[#ffde59] mt-4 mx-auto"></span>
           </h2>
 
-          <p class="text-lg leading-relaxed mb-6">
-            Al igual que un 404 es un error en la web, a veces nos perdemos en la urna de votación. Pero con Daniel Ximénez, marcamos el rumbo correcto para Lavalleja. ¡No dejes que un error te detenga!
-          </p>
-
-          <p class="text-lg leading-relaxed mb-6">
-            Recuerda, incluso cuando la página no existe, la misión de transformar Lavalleja sí. ¡Vamos juntos hacia un futuro brillante y sin errores!
-          </p>
-
-          <!-- Call to Action: Botón de Ir al Inicio -->
-          <HomeButton />
-
-          <div class="bg-[#360f62] text-[#ffde59] p-8 rounded-lg mt-12">
-            <h3 class="text-2xl font-bold mb-4">¡Vamos a Corrección!</h3>
-            <p class="text-lg">
-              No hay error que Daniel y su equipo no puedan corregir. ¡Volvamos al inicio y sigamos construyendo un Lavalleja de primera!
+          <div
+            class="bg-gradient-to-r from-[#f9f9f9] to-[#f0f0f0] p-8 rounded-xl my-12 border-l-4 border-[#ffde59] shadow-sm"
+          >
+            <p class="text-2xl font-semibold text-[#253f5f] italic text-center">
+              "Al igual que un 404 es un error en la web, a veces nos perdemos
+              en la urna de votación. Pero con Daniel Ximénez, marcamos el rumbo
+              correcto para Lavalleja."
             </p>
+          </div>
+
+          <p class="text-xl leading-relaxed mb-8 text-gray-700 text-center">
+            Recuerda, incluso cuando la página no existe, la misión de
+            transformar Lavalleja sí. ¡Vamos juntos hacia un futuro brillante y
+            sin errores!
+          </p>
+
+          <!-- Call to Action Mejorado -->
+          <div class="text-center my-16">
+            <h3 class="text-3xl font-bold text-[#253f5f] mb-6">
+              ¿Te llevamos de vuelta al camino?
+            </h3>
+            <div
+              class="transform hover:scale-105 transition-transform duration-300"
+            >
+              <HomeButton />
+            </div>
+          </div>
+
+          <!-- Sección final más impactante -->
+          <div
+            class="bg-gradient-to-r from-[#253f5f] to-[#1d304c] text-white p-10 rounded-xl mt-16 shadow-lg transform hover:scale-[1.01] transition-transform duration-300"
+          >
+            <h4
+              class="text-3xl font-bold mb-6 flex items-center justify-center"
+            >
+              <span class="text-[#ffde59] mr-2">¡Vamos</span> a Corrección!
+            </h4>
+            <p class="text-xl leading-relaxed text-center">
+              No hay error que Daniel y su equipo no puedan corregir. ¡Volvamos
+              al inicio y sigamos construyendo un Lavalleja de primera! <span
+                class="text-[#ffde59] font-bold">¡Hagámoslo realidad!</span
+              >
+            </p>
+          </div>
+
+          <!-- Sección adicional con iconos -->
+          <div
+            class="mt-16 flex flex-col md:flex-row justify-center gap-8 text-center"
+          >
+            <div class="flex flex-col items-center">
+              <div class="p-4 bg-[#ffde59]/20 rounded-full mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-[#253f5f]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  ></path>
+                </svg>
+              </div>
+              <a href="/" class="text-[#253f5f] font-medium">Volver al Inicio</a>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="p-4 bg-[#ffde59]/20 rounded-full mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-[#253f5f]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <a href="/propuestas" class="text-[#253f5f] font-medium">Ver Propuestas</a>
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="p-4 bg-[#ffde59]/20 rounded-full mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8 text-[#253f5f]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <a href="/contacto" class="text-[#253f5f] font-medium">Contactarnos</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 </Layout>
-
-<style>
-  .prose h2 {
-    color: #360f62;
-  }
-
-  .prose h3 {
-    color: #ffde59;
-  }
-
-  /* Ajustes adicionales para la página */
-  section.relative {
-    background-image: url("/assets/Participate.webp"); /* Asegúrate de reemplazar con la ruta correcta si es necesario */
-  }
-</style>

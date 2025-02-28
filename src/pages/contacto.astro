@@ -3,10 +3,53 @@ import Layout from "../layouts/Layout.astro";
 import SumateButton from "../components/sumate/SumateButton";
 import { Image } from "astro:assets";
 import Participate from "../assets/Participate.webp";
+
+const pageTitle = "Sumate | Daniel Ximénez Intendente";
+const pageDescription = "¡Sumate a la campaña de Daniel Ximénez y construyamos juntos el futuro de Lavalleja! Descubre cómo puedes participar.";
+const imageUrl = "/Logo.webp";
+const pageUrl = "https://danielximenez.info/contacto/";
 ---
 
 <Layout>
-  <title slot="title">Sumate! | Daniel Ximénez</title>
+
+ <!-- Meta tags SEO -->
+ <title slot="title">{pageTitle}</title>
+ <meta slot="head" name="description" content={pageDescription} />
+ <meta slot="head" name="keywords" content="contacto, sumate, campaña política, Daniel Ximénez, Lavalleja" />
+
+ <!-- Open Graph para redes sociales -->
+ <meta slot="head" property="og:type" content="website" />
+ <meta slot="head" property="og:title" content={pageTitle} />
+ <meta slot="head" property="og:description" content={pageDescription} />
+ <meta slot="head" property="og:image" content={imageUrl} />
+ <meta slot="head" property="og:url" content={pageUrl} />
+ <meta slot="head" property="og:site_name" content="Ser Lavalleja" />
+
+ <!-- Twitter Card -->
+ <meta slot="head" name="twitter:card" content="summary_large_image" />
+ <meta slot="head" name="twitter:title" content={pageTitle} />
+ <meta slot="head" name="twitter:description" content={pageDescription} />
+ <meta slot="head" name="twitter:image" content={imageUrl} />
+ <meta slot="head" name="twitter:url" content={pageUrl} />
+
+ <!-- Canonical URL -->
+ <link slot="head" rel="canonical" href={pageUrl} />
+
+ <!-- Datos Estructurados (JSON-LD) -->
+ <script type="application/ld+json" slot="head">
+ {`
+   {
+     "@context": "https://schema.org",
+     "@type": "WebPage",
+     "name": "${pageTitle}",
+     "description": "${pageDescription}",
+     "url": "${pageUrl}",
+     "image": "${imageUrl}"
+   }
+ `}
+ </script>
+
+  <title slot="title">Sumate! | Daniel Ximénez Intendente</title>
   <main class="min-h-screen mt-14 lg:mt-28 md:mt-32">
     <!-- Hero Section -->
     <section

@@ -3,10 +3,57 @@ import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import EconomiaImg from "../assets/EconomiaImg.webp";
 import PdfViewer from "../components/pdf/PdfViewer";
+
+const pageTitle = "Plataforma de Gobierno | Daniel Ximénez Intendente";
+const pageDescription = "Conocé la plataforma de gobierno de Daniel Ximénez, enfocada en el desarrollo integral y bienestar de Lavalleja. ¡Sumate al cambio!";
+const imageUrl = "/Logo.webp";
+const pageUrl = "https://danielximenez.info/propuestas/";
 ---
 
 <Layout>
-  <title slot="title">Plataforma de Gobierno | Daniel Ximénez</title>
+
+  <!-- Meta tags SEO -->
+  <title slot="title">{pageTitle}</title>
+  <meta slot="head" name="description" content={pageDescription} />
+  <meta slot="head" name="keywords" content="plataforma de gobierno, programa de gobierno, propuestas, Daniel Ximénez, Lavalleja, desarrollo, bienestar, campaña política" />
+
+  <!-- Open Graph para redes sociales -->
+  <meta slot="head" property="og:type" content="website" />
+  <meta slot="head" property="og:title" content={pageTitle} />
+  <meta slot="head" property="og:description" content={pageDescription} />
+  <meta slot="head" property="og:image" content={imageUrl} />
+  <meta slot="head" property="og:url" content={pageUrl} />
+  <meta slot="head" property="og:site_name" content="Ser Lavalleja" />
+
+  <!-- Twitter Card -->
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+  <meta slot="head" name="twitter:title" content={pageTitle} />
+  <meta slot="head" name="twitter:description" content={pageDescription} />
+  <meta slot="head" name="twitter:image" content={imageUrl} />
+  <meta slot="head" name="twitter:url" content={pageUrl} />
+
+  <!-- Canonical URL -->
+  <link slot="head" rel="canonical" href={pageUrl} />
+
+  <!-- Datos Estructurados (JSON-LD) -->
+  <script type="application/ld+json" slot="head">
+  {`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "${pageTitle}",
+      "description": "${pageDescription}",
+      "url": "${pageUrl}",
+      "image": "${imageUrl}",
+      "author": {
+        "@type": "Person",
+        "name": "Daniel Ximénez"
+      }
+    }
+  `}
+  </script>
+
+  <title slot="title">Plataforma de Gobierno | Daniel Ximénez Intendente</title>
   <main class="min-h-screen mt-14 lg:mt-28 md:mt-32">
     <!-- Hero Section -->
     <section class="relative h-[70vh] bg-gradient-to-r from-[#1b2e45] to-[#253f5f] overflow-hidden">

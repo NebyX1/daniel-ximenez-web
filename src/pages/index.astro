@@ -1,9 +1,56 @@
 ---
 import Header from '../components/home/Home.astro';
 import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Daniel Ximénez Intendente | Construyendo un Lavalleja de Primera";
+const pageDescription = "Conocé a Daniel Ximénez, su visión y compromiso para transformar Lavalleja en un lugar de oportunidades y crecimiento. ¡Con Daniel Lavalleja Sí!";
+const imageUrl = "/Logo.webp";
+const pageUrl = "https://danielximenez.info/";
 ---
 
 <Layout>
-	<title slot="title">Home | Daniel Ximénez</title>
+
+	<!-- Meta tags SEO -->
+	<title slot="title">{pageTitle}</title>
+	<meta slot="head" name="description" content={pageDescription} />
+	<meta slot="head" name="keywords" content="Daniel Ximénez, Lavalleja, candidato, intendente, campaña política, desarrollo, visión, propuestas" />
+  
+	<!-- Open Graph para redes sociales -->
+	<meta slot="head" property="og:type" content="website" />
+	<meta slot="head" property="og:title" content={pageTitle} />
+	<meta slot="head" property="og:description" content={pageDescription} />
+	<meta slot="head" property="og:image" content={imageUrl} />
+	<meta slot="head" property="og:url" content={pageUrl} />
+	<meta slot="head" property="og:site_name" content="Ser Lavalleja" />
+  
+	<!-- Twitter Card -->
+	<meta slot="head" name="twitter:card" content="summary_large_image" />
+	<meta slot="head" name="twitter:title" content={pageTitle} />
+	<meta slot="head" name="twitter:description" content={pageDescription} />
+	<meta slot="head" name="twitter:image" content={imageUrl} />
+	<meta slot="head" name="twitter:url" content={pageUrl} />
+  
+	<!-- Canonical URL -->
+	<link slot="head" rel="canonical" href={pageUrl} />
+  
+	<!-- Datos Estructurados (JSON-LD) -->
+	<script type="application/ld+json" slot="head">
+	{`
+	  {
+		"@context": "https://schema.org",
+		"@type": "WebPage",
+		"name": "${pageTitle}",
+		"description": "${pageDescription}",
+		"url": "${pageUrl}",
+		"image": "${imageUrl}",
+		"author": {
+		  "@type": "Person",
+		  "name": "Daniel Ximénez"
+		}
+	  }
+	`}
+	</script>
+  
 	<Header />
-</Layout>
+  </Layout>
+  
