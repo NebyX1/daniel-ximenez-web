@@ -6,133 +6,161 @@ import NaturalezaImg from "../assets/NaturalezaImg.webp";
 ---
 
 <Layout>
-    <title slot="title">Biografía | Daniel Ximénez</title>
+  <title slot="title">Biografía | Daniel Ximénez</title>
   <main class="min-h-screen mt-14 lg:mt-28 md:mt-32">
     <!-- Hero Section -->
-    <section class="relative h-[60vh] bg-[#360f62]">
+    <section class="relative h-[70vh] bg-gradient-to-r from-[#1b2e45] to-[#253f5f] overflow-hidden">
       <div class="absolute inset-0">
         <Image
           src={NaturalezaImg}
           alt="Cerro Arequita"
-          class="w-full h-full object-cover opacity-20"
+          class="w-full h-full object-cover opacity-25 scale-105 hover:scale-110 transition-transform duration-700"
         />
       </div>
-      <div class="relative container mx-auto px-4 h-full flex items-center">
-        <h1 class="text-5xl md:text-7xl font-bold text-white max-w-3xl">
-          Construyendo un Lavalleja de Primera
+      <div 
+        class="absolute inset-0 bg-gradient-to-t from-[#253f5f]/80 via-transparent to-transparent">
+      </div>
+      <div class="relative container mx-auto px-6 h-full flex flex-col justify-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white max-w-3xl leading-tight">
+          <span class="text-[#ffde59]">Conocé</span> a Daniel Ximénez
         </h1>
+        <p class="text-xl md:text-2xl text-white/90 mt-4 max-w-2xl">
+          Construyendo juntos un Lavalleja de Primera
+        </p>
       </div>
     </section>
 
     <!-- Bio Content -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+    <section class="py-16 md:py-24 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
           <!-- Sidebar -->
-          <div class="md:col-span-4">
-            <div class="sticky top-8">
-              <Image
-                src={DanielBig}
-                alt="Daniel Ximénez"
-                class="w-full rounded-lg shadow-xl mb-6"
-              />
-              <div class="bg-[#ffde59] p-6 rounded-lg shadow-lg">
-                <h3 class="text-[#360f62] font-bold text-xl mb-4">
+          <div class="md:col-span-4 lg:col-span-4">
+            <div class="sticky top-24">
+              <div class="relative mb-8 group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-[#e2e0e0] to-[#ffffff] rounded-lg blur opacity-25 group-hover:opacity-70 transition duration-1000 group-hover:duration-300"></div>
+                <Image
+                  src={DanielBig}
+                  alt="Daniel Ximénez"
+                  class="relative w-full rounded-lg shadow-2xl transform transition-transform duration-500 group-hover:scale-[1.01]"
+                />
+              </div>
+              <div class="bg-gradient-to-br from-[#ffde59] to-[#ffd21a] p-7 rounded-xl shadow-lg transform hover:shadow-xl transition-all duration-300">
+                <h3 class="text-[#253f5f] font-bold text-2xl mb-5 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
                   Trayectoria Destacada
                 </h3>
-                <ul class="space-y-3 text-[#360f62]">
-                  <li>✓ Médico Cirujano</li>
-                  <li>✓ Ex-Director Hospital de Minas (2005-2014)</li>
-                  <li>✓ Posgrado en Administración de Centros de Salud</li>
-                  <li>✓ Presidente del Frente Amplio Lavalleja</li>
+                <ul class="space-y-4 text-[#253f5f] font-medium">
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#253f5f] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Médico Cirujano</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#253f5f] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Ex-Director Hospital de Minas (2005-2014)</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#253f5f] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Cursó Posgrado en Administración de Centros de Salud</span>
+                  </li>
+                  <li class="flex items-start">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#253f5f] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Presidente del Frente Amplio Lavalleja</span>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
 
           <!-- Main Content -->
-          <div class="md:col-span-8">
+          <div class="md:col-span-8 lg:col-span-8">
             <div class="prose prose-lg max-w-none">
-              <h2 class="text-4xl font-bold text-[#360f62] mb-8">
-                Mi Historia
+              <h2 class="text-4xl md:text-5xl font-bold text-[#253f5f] mb-8 relative">
+                Bio de Daniel
+                <span class="block h-1 w-24 bg-[#ffde59] mt-4"></span>
               </h2>
 
-              <p class="text-lg leading-relaxed mb-6">
-                Mi nombre es Daniel Ximénez, nací y crecí en la ciudad de Minas,
-                en el corazón de nuestro querido Lavalleja. Cursé mis estudios
-                de primaria y secundaria en instituciones públicas, donde
-                aprendí el valor de la educación como motor de cambio y
-                crecimiento.
+              <p class="text-xl leading-relaxed mb-8 text-gray-700">
+                Daniel Ximénez nació y creció en Minas, capital de Lavalleja.
+                Desde chico, en el barrio La Rambla, aprendió el valor de la
+                comunidad y el trabajo en equipo. Se formó en la <span class="font-semibold">Escuela N° 1</span> y
+                en el <span class="font-semibold">Liceo Departamental N° 1 Eduardo Fabini</span>, afianzando su
+                compromiso con el estudio. Entre la ciudad y el campo, ya que
+                pasaba largas vacaciones en la propiedad rural de sus abuelos,
+                aprendió a ver la parte dura, pero también la belleza de la vida
+                en el campo, forjando en él el respeto por el esfuerzo, la
+                humildad y nuestras tradiciones.
               </p>
 
-              <div
-                class="bg-gray-50 p-6 rounded-lg my-8 border-l-4 border-[#ffde59]"
-              >
-                <p class="text-xl font-semibold text-[#360f62]">
-                  "Mi mayor sueño es ver a Lavalleja convertido en un modelo a
-                  seguir para todo Uruguay."
+              <div class="bg-gradient-to-r from-[#f9f9f9] to-[#f0f0f0] p-8 rounded-xl my-12 border-l-4 border-[#ffde59] shadow-sm">
+                <p class="text-2xl font-semibold text-[#253f5f] italic">
+                  "El éxito se construye en equipo y no hay desafío insuperable cuando se junta gente comprometida."
                 </p>
               </div>
 
-              <p class="text-lg leading-relaxed mb-6">
-                Con el sueño de servir a los demás, me mudé a Montevideo para
-                estudiar en la Facultad de Medicina de la Universidad de la
-                República, donde me recibí de médico. Más tarde, me especialicé
-                en cirugía y profundicé mis conocimientos estudiando un posgrado
-                en Administración de Centros de Salud.
+              <p class="text-xl leading-relaxed mb-8 text-gray-700">
+                Movido por el deseo de servir a su gente, se trasladó a
+                Montevideo para estudiar Medicina en la <span class="font-semibold">Universidad de la
+                República</span>, donde se graduó como médico y se especializó en
+                cirugía. No tardó en meterse a la docencia universitaria,
+                compartiendo su experiencia con futuros profesionales y
+                aprendiendo de ellos. Para entender mejor la administración en
+                salud, realizó un <span class="font-semibold">posgrado en Administración de Centros de
+                Salud</span>, convencido de que una gestión eficiente y con
+                conocimiento es esencial para ofrecer un servicio de calidad.
               </p>
 
-              <h3 class="text-2xl font-bold text-[#360f62] mt-12 mb-6">
-                Experiencia y Liderazgo
+              <p class="text-xl leading-relaxed mb-8 text-gray-700">
+                Durante casi diez años, estuvo al mando del <span class="font-semibold">Hospital de Minas
+                (2005-2014)</span>, trabajando sin pausa para mejorar la atención en su
+                tierra, aplicando medidas para regularizar la situación de
+                muchos funcionarios y profesionalizando los servicios. Hoy forma
+                parte de la <span class="font-semibold">Comisión Directiva del Sanatorio de Minas</span> y tuvo la
+                oportunidad de presidir el Frente Amplio de Lavalleja. Su camino
+                le demostró que el éxito se construye en equipo y que no hay
+                desafío insuperable cuando se junta gente comprometida.
+              </p>
+
+              <h3 class="text-3xl font-bold text-[#253f5f] mt-16 mb-8">
+                La Visión de Daniel para Lavalleja
               </h3>
-              <p class="text-lg leading-relaxed mb-6">
-                A lo largo de mi carrera, he tenido el honor de liderar equipos
-                y tomar decisiones que marcaron una diferencia. Durante casi una
-                década, fui Director del Hospital de Minas (2005-2014), un
-                período donde trabajamos incansablemente para mejorar la
-                atención y la calidad de los servicios de salud en nuestra
-                comunidad. Actualmente, formo parte de la Comisión Directiva del
-                Sanatorio de Minas y tuve el privilegio de ser el Presidente del
-                Frente Amplio de Lavalleja. Mi experiencia en la gestión de
-                instituciones públicas, privadas y políticas me ha enseñado una
-                lección clave: el éxito se construye en equipo. Siempre he
-                creído en la importancia de rodearse de personas comprometidas y
-                talentosas, porque cuando se trabaja juntos con un objetivo
-                claro, no hay desafío que no podamos superar.
+              
+              <p class="text-xl leading-relaxed mb-8 text-gray-700">
+                El sueño de Daniel es ver a Lavalleja como modelo a seguir en
+                todo Uruguay, un departamento donde la industria crezca, los
+                jóvenes encuentren oportunidades y cada rincón se llene de
+                orgullo y esperanza. Su apuesta es por una <span class="font-semibold">gestión abierta,
+                participativa y transparente</span>, donde cada vecino cuente y las
+                soluciones se forjen de la mano, con la garra y el sentir de un
+                pueblo que sabe lo que quiere.
               </p>
 
-              <h3 class="text-2xl font-bold text-[#360f62] mt-12 mb-6">
-                Mi Visión para Lavalleja
-              </h3>
-              <p class="text-lg leading-relaxed mb-6">
-                Mi mayor sueño es ver a Lavalleja convertido en un modelo a
-                seguir para todo Uruguay. Quiero ayudar a construir un
-                departamento que sea sinónimo de innovación, empleo de calidad y
-                desarrollo local sostenible. Imagino un Lavalleja donde nuestras
-                industrias crezcan, nuestros jóvenes encuentren oportunidades
-                aquí, y nuestras comunidades vivan con orgullo y esperanza en el
-                futuro. Pero sé que este sueño no se logra solo. Por eso, mi
-                compromiso es liderar una gestión participativa y transparente,
-                donde cada vecino tenga voz, y donde las decisiones se tomen
-                escuchando las distintas visiones de nuestra gente. Quiero que
-                Lavalleja sea pionero en el uso de tecnología de punta para
-                ofrecer servicios eficientes y modernos, siempre al servicio de
-                la ciudadanía. Mi propuesta es clara: construir juntos un
-                programa abierto, que refleje las verdaderas necesidades y
-                sueños de nuestro pueblo. Quiero liderar un Lavalleja donde las
-                soluciones no sean impuestas, sino creadas con y para la gente.
-              </p>
-
-              <div class="bg-[#360f62] text-[#ffde59] p-8 rounded-lg mt-12">
-                <h4 class="text-2xl font-bold mb-4">
-                  Compromiso con el Futuro
+              <!-- Sección final -->
+              <div class="bg-gradient-to-r from-[#253f5f] to-[#1d304c] text-white p-10 rounded-xl mt-16 shadow-lg transform hover:scale-[1.01] transition-transform duration-300">
+                <h4 class="text-3xl font-bold mb-6 flex items-center">
+                  <span class="text-[#ffde59] mr-2">Compromiso</span> con el Futuro
                 </h4>
-                <p class="text-lg">
+                <p class="text-xl leading-relaxed">
                   Este no es solo un proyecto político; es una misión de vida.
                   Sé que, unidos, podemos llevar a Lavalleja a ser el número uno
                   en Uruguay. Un Lavalleja de primera es posible, y comienza con
-                  nosotros. ¡Hagámoslo realidad!
+                  nosotros. <span class="text-[#ffde59] font-bold">¡Hagámoslo realidad!</span>
                 </p>
+                <div class="mt-8">
+                  <a href="/contacto" class="inline-block bg-[#ffde59] text-[#253f5f] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#ffd21a] hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                    + Sumate al Equipo
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -141,9 +169,3 @@ import NaturalezaImg from "../assets/NaturalezaImg.webp";
     </section>
   </main>
 </Layout>
-
-<style>
-  .prose h2 {
-    color: #360f62;
-  }
-</style>

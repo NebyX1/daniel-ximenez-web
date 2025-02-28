@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const SumateButton = () => {
   // Reemplaza el número de teléfono y el mensaje según tus necesidades
-  const whatsappLink = "https://wa.me/1234567890?text=Hola,%20quiero%20sumarme%20a%20la%20campaña!";
+  const whatsappLink = "https://wa.me/+59899342505?text=Hola,%20quiero%20sumarme%20a%20la%20campaña!";
 
   return (
     <a

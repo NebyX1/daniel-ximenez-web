@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Brittany';
+    src: url('/src/assets/fonts/BrittanySignature.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  .logoFont {
+    font-family: 'Brittany', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  

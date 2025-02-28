@@ -3,12 +3,12 @@ import { FaWhatsapp, FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa"
 
 const TopBar = () => {
   return (
-    <div className="bg-[#ffde59] w-full flex top-0 justify-center items-center py-2">
-      <span className="text-[#360f62] font-semibold mr-4">Seguinos en:</span>
+    <div className="bg-[#253f5f] w-full flex top-0 justify-center items-center py-2">
+      <span className="text-[white] font-semibold mr-4">Seguinos en:</span>
       <div className="flex space-x-4">
         <a
-          href="https://wa.me/+573108275815"
-          className="text-[#360f62] hover:scale-110 transition-transform"
+          href="https://wa.me/+59899342505"
+          className="text-[white] hover:scale-110 transition-transform"
           aria-label="WhatsApp"
           target="_blank"
           rel="noopener noreferrer"
@@ -16,8 +16,8 @@ const TopBar = () => {
           <FaWhatsapp size={20} />
         </a>
         <a
-          href="https://www.facebook.com/danielximenez"
-          className="text-[#360f62] hover:scale-110 transition-transform"
+          href="https://www.facebook.com/profile.php?id=61573161549182"
+          className="text-[white] hover:scale-110 transition-transform"
           aria-label="Facebook"
           target="_blank"
           rel="noopener noreferrer"
@@ -25,8 +25,8 @@ const TopBar = () => {
           <FaFacebookF size={20} />
         </a>
         <a
-          href="https://www.youtube.com/@danielximenez"
-          className="text-[#360f62] hover:scale-110 transition-transform"
+          href="https://www.youtube.com/@DanielX-2025"
+          className="text-[white] hover:scale-110 transition-transform"
           aria-label="YouTube"
           target="_blank"
           rel="noopener noreferrer"
@@ -34,8 +34,8 @@ const TopBar = () => {
           <FaYoutube size={20} />
         </a>
         <a
-          href="https://www.instagram.com/danielximenez"
-          className="text-[#360f62] hover:scale-110 transition-transform"
+          href="https://www.instagram.com/daniel.ximenez.intendente/"
+          className="text-[white] hover:scale-110 transition-transform"
           aria-label="Instagram"
           target="_blank"
           rel="noopener noreferrer"

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
+import styles from "../../../styles/smallnav.module.css";
 
 const SmallNav = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -9,17 +10,17 @@ const SmallNav = () => {
   }
 
   return (
-    <nav className="bg-white text-[#360f62] fixed w-full top-0 left-0 z-50">
+    <nav className="bg-white text-[#253f5f] fixed w-full top-0 left-0 z-50">
       {/* Contenedor principal */}
       <div className="max-w-md mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo (texto o imagen, personalízalo a tu gusto) */}
         <div className="text-xl font-bold tracking-wide">
-          <a href="/">D</a>
+          <a className={styles.logoFont} href="/">Si!</a>
         </div>
 
         {/* Botón Hamburguesa */}
         <button
-          className="text-[#360f62] focus:outline-none"
+          className="text-[#253f5f] focus:outline-none"
           onClick={toggleMenu}
           aria-label="Menu Button"
         >

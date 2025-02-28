@@ -9,72 +9,89 @@ import PdfViewer from "../components/pdf/PdfViewer";
   <title slot="title">Plataforma de Gobierno | Daniel Ximénez</title>
   <main class="min-h-screen mt-14 lg:mt-28 md:mt-32">
     <!-- Hero Section -->
-    <section class="relative h-[60vh] bg-[#360f62]">
+    <section class="relative h-[70vh] bg-gradient-to-r from-[#1b2e45] to-[#253f5f] overflow-hidden">
       <div class="absolute inset-0">
         <Image
           src={EconomiaImg}
           alt="Cerro Arequita"
-          class="w-full h-full object-cover opacity-20"
+          class="w-full h-full object-cover opacity-25 scale-105 hover:scale-110 transition-transform duration-700"
         />
       </div>
-      <div class="relative container mx-auto px-4 h-full flex items-center">
-        <h1 class="text-5xl md:text-7xl font-bold text-white max-w-3xl">
-          Plataforma de Gobierno de Daniel Ximénez
+      <div 
+        class="absolute inset-0 bg-gradient-to-t from-[#253f5f]/80 via-transparent to-transparent">
+      </div>
+      <div class="relative container mx-auto px-6 h-full flex flex-col justify-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white max-w-3xl leading-tight">
+          <span class="text-[#ffde59]">Plataforma</span> de Gobierno
         </h1>
+        <p class="text-xl md:text-2xl text-white/90 mt-4 max-w-2xl">
+          Un plan integral para el desarrollo y bienestar de Lavalleja
+        </p>
       </div>
     </section>
 
     <!-- Plataforma Content -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="prose prose-lg max-w-none">
-          <h2 class="text-4xl font-bold text-[#360f62] mb-8">
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-bold text-[#253f5f] mb-10 relative">
             Nuestra Plataforma
+            <span class="block h-1 w-24 bg-[#ffde59] mt-4"></span>
           </h2>
 
-          <p class="text-lg leading-relaxed mb-6">
+          <p class="text-xl leading-relaxed mb-10 text-gray-700">
             La Plataforma de Gobierno de Daniel Ximénez está diseñada para
             transformar Lavalleja en un departamento ejemplar, promoviendo
             el desarrollo sostenible, la innovación y el bienestar de todos
             sus habitantes.
           </p>
 
-          <div
-            class="bg-gray-50 p-6 rounded-lg my-8 border-l-4 border-[#ffde59]"
-          >
-            <p class="text-xl font-semibold text-[#360f62]">
+          <!-- Frase destacada con mejor diseño -->
+          <div class="bg-gradient-to-r from-[#f9f9f9] to-[#f0f0f0] p-8 rounded-xl my-12 border-l-4 border-[#ffde59] shadow-sm">
+            <p class="text-2xl font-semibold text-[#253f5f] italic">
               "Construyamos juntos un Lavalleja próspero y moderno para todos."
             </p>
           </div>
 
-          <!-- Nueva Sección de Participación -->
-          <section class="my-12 p-6 bg-[#f0f0f0] rounded-lg text-center">
-            <h3 class="text-3xl font-bold text-[#360f62] mb-4">
+          <!-- Sección de Participación -->
+          <section class="my-16 p-10 bg-gradient-to-br from-[#f5f5f5] to-[#e9e9e9] rounded-xl text-center shadow-sm">
+            <div class="inline-block p-4 bg-[#ffde59]/20 rounded-full mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-[#253f5f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold text-[#253f5f] mb-4">
               ¿Querés aportar ideas? ¿Querés participar?
             </h3>
-            <p class="text-lg mb-6">
+            <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-700">
               Este programa es abierto y está en constante construcción. Es una hoja de ruta diseñada para evolucionar según las necesidades de nuestra sociedad. Tu participación es clave para construir juntos un futuro mejor.
             </p>
-            <a href="/contacto" class="inline-block bg-[#360f62] text-[#ffde59] px-6 py-3 rounded-full font-semibold hover:bg-[#2e0d57] transition">
+            <a href="/contacto" class="inline-block bg-[#253f5f] text-[#ffde59] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#1d304c] hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               + Sumate a la Campaña
             </a>
           </section>
 
           <!-- Integración del Visualizador de PDF -->
-          <h3 class="text-2xl font-bold text-[#360f62] mt-12 mb-6">
-            Descarga la Plataforma Completa
-          </h3>
-          <PdfViewer client:load />
+          <div class="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+            <h3 class="text-2xl font-bold text-[#253f5f] mb-8 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3 text-[#ffde59]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              Descarga la Plataforma Completa
+            </h3>
+            <PdfViewer client:load />
+          </div>
 
-          <div class="bg-[#360f62] text-[#ffde59] p-8 rounded-lg mt-12">
-            <h4 class="text-2xl font-bold mb-4">
-              Compromiso con el Futuro
+          <!-- Sección final -->
+          <div class="bg-gradient-to-r from-[#253f5f] to-[#1d304c] text-white p-10 rounded-xl mt-16 shadow-lg transform hover:scale-[1.01] transition-transform duration-300">
+            <h4 class="text-3xl font-bold mb-6 flex items-center">
+              <span class="text-[#ffde59] mr-2">Compromiso</span> con el Futuro
             </h4>
-            <p class="text-lg">
+            <p class="text-xl leading-relaxed">
               Este no es solo un proyecto político; es una misión de vida.
               Sé que, unidos, podemos llevar a Lavalleja a ser el número uno
               en Uruguay. Un Lavalleja de primera es posible, y comienza con
-              nosotros. ¡Hagámoslo realidad!
+              nosotros. <span class="text-[#ffde59] font-bold">¡Hagámoslo realidad!</span>
             </p>
           </div>
         </div>
@@ -82,22 +99,3 @@ import PdfViewer from "../components/pdf/PdfViewer";
     </section>
   </main>
 </Layout>
-
-<style>
-  .prose h2 {
-    color: #360f62;
-  }
-
-  .prose h3 {
-    color: #360f62;
-  }
-
-  .prose h4 {
-    color: #ffde59;
-  }
-
-  /* Estilos para el botón */
-  a.inline-block {
-    transition: background-color 0.3s ease;
-  }
-</style>

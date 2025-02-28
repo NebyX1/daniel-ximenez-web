@@ -6,10 +6,11 @@ import {
   FaInstagram,
   FaHeart,
 } from "react-icons/fa";
+import styles from "../../../styles/bigfooter.module.css";
 
 const BigFooter = () => {
   return (
-    <footer className="bg-[#360f62] text-white px-8 py-10">
+    <footer className="bg-[#253f5f] text-white px-8 py-10">
       {/* Contenedor principal con ancho máximo y columnas */}
       <div className="max-w-6xl mx-auto grid grid-cols-3 gap-8">
         {/* Columna 1: Información */}
@@ -35,11 +36,11 @@ const BigFooter = () => {
               </a>
             </li>
             <li>
-              <a href="/sumate" className="hover:underline">
+              <a href="/contacto" className="hover:underline">
                 +Sumate al Equipo
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="https://giana-ai.streamlit.app/" target="_blank" className="hover:underline">
                 Chatea con GIANA
               </a>
@@ -48,7 +49,7 @@ const BigFooter = () => {
               <a href="https://street-sheriff.netlify.app/" target="_blank" className="hover:underline">
                 Street Sheriff
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 
@@ -60,7 +61,7 @@ const BigFooter = () => {
           </p>
           <div className="flex space-x-4 mt-2">
             <a
-              href="https://wa.me/"
+              href="https://wa.me/+59899342505"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-green-400 transition-colors duration-300"
@@ -68,7 +69,7 @@ const BigFooter = () => {
               <FaWhatsapp size={22} />
             </a>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/profile.php?id=61573161549182"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-500 transition-colors duration-300"
@@ -76,7 +77,7 @@ const BigFooter = () => {
               <FaFacebookF size={22} />
             </a>
             <a
-              href="https://www.youtube.com/"
+              href="https://www.youtube.com/@DanielX-2025"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-red-500 transition-colors duration-300"
@@ -84,7 +85,7 @@ const BigFooter = () => {
               <FaYoutube size={22} />
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/daniel.ximenez.intendente/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-pink-500 transition-colors duration-300"
@@ -104,7 +105,7 @@ const BigFooter = () => {
         </div>
 
         {/* Ejemplo: puedes colocar aquí alguna frase o sublinks */}
-        <div className="text-sm text-gray-300">"Vamos por nuestros sueños"</div>
+        <div className="text-sm text-gray-300">"Con Daniel Lavalleja <span className={`text-xl ${styles.logoFont}`}>Si!</span>"</div>
       </div>
     </footer>
   );

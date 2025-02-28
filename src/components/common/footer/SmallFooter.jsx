@@ -3,11 +3,11 @@ import { FaWhatsapp, FaFacebookF, FaYoutube, FaInstagram, FaHeart } from 'react-
 
 const SmallFooter = () => {
   return (
-    <footer className="bg-[#360f62] text-white text-xs py-4 px-6 flex flex-col items-center space-y-2">
+    <footer className="bg-[#253f5f] text-white text-xs py-4 px-6 flex flex-col items-center space-y-2">
       {/* Redes Sociales */}
       <div className="flex space-x-4">
         <a
-          href="https://wa.me/"
+          href="https://wa.me/+59899342505"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-green-400 transition-colors duration-300"
@@ -15,7 +15,7 @@ const SmallFooter = () => {
           <FaWhatsapp size={20} />
         </a>
         <a
-          href="https://www.facebook.com/"
+          href="https://www.facebook.com/profile.php?id=61573161549182"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-blue-500 transition-colors duration-300"
@@ -23,7 +23,7 @@ const SmallFooter = () => {
           <FaFacebookF size={20} />
         </a>
         <a
-          href="https://www.youtube.com/"
+          href="https://www.youtube.com/@DanielX-2025"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-red-500 transition-colors duration-300"
@@ -31,7 +31,7 @@ const SmallFooter = () => {
           <FaYoutube size={20} />
         </a>
         <a
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/daniel.ximenez.intendente/"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-pink-500 transition-colors duration-300"

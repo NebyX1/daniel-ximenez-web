@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import DanielLogo from "../../../assets/DanielLogo.png";
+// import DanielLogo from "../../../assets/DanielLogo.webp";
+import styles from "../../../styles/bignav.module.css";
 import TopBar from "../TopBar";
 
 const BigNav = () => {
@@ -29,15 +30,11 @@ const BigNav = () => {
           {/* Alto del Nav */}
           <div className="flex flex-col items-center justify-center h-20">
             {/* Logo */}
-            <a href="/" className="flex items-center space-x-2">
-              <img
-                src={DanielLogo.src}
-                alt="Daniel Logo"
-                className="h-12 w-auto"
-              />
+            <a href="/" className={`flex items-center space-x-2 text-3xl text-[#253f5f] ${styles.logoFont}`}>
+              Si!
             </a>
             {/* Links */}
-            <div className="mt-2 mb-2 flex space-x-6 text-[#360f62] text-base font-medium">
+            <div className="mt-2 mb-2 flex space-x-6 text-[#253f5f] text-base font-medium">
               <a
                 href="/"
                 className="hover:text-purple-500 transition-colors duration-300"
@@ -77,4 +74,3 @@ const BigNav = () => {
 };
 
 export default BigNav;
-
