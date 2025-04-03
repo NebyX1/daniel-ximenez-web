@@ -1,8 +1,21 @@
 ---
-// Importamos los recursos necesarios
+// Importamos las secciones del Home
+import Header from "./responsive/Header";
+import Sumate from "./responsive/Sumate";
+import Programa from "./responsive/Programa";
+
+// Imágenes de la sección del Header
 import HomeHeader from "../../assets/banners/HomeHeader.webp";
-import HomeSumate from "../../assets/banners/HomeSumate.webp";
+import HomeHeaderMobile from "../../assets/banners/HomeHeaderMobile.webp";
+
+// Imágenes de la sección de propuestas
 import HomePrograma from "../../assets/banners/HomePrograma.webp";
+import HomeProgramaMobile from "../../assets/banners/HomeProgramaMobile.webp";
+
+// Imágenes de la sección de sumate al equipo
+import HomeSumate from "../../assets/banners/HomeSumate.webp";
+import HomeSumateMobile from "../../assets/banners/HomeSumateMobile.webp";
+
 import HomeGiana from "../../assets/banners/HomeGiana.webp";
 import HomeStreetSheriff from "../../assets/banners/HomeStreetSheriff.webp";
 import HomeKanban from "../../assets/banners/HomeKanban.webp";
@@ -10,46 +23,28 @@ import styles from "../../styles/home.module.css";
 ---
 
 <!-- Componente Header Principal del Home -->
-<section class=`${styles.section} mt-14 lg:mt-28 md:mt-32`>
-  <div class={styles.imageContainer}>
-    <img
-      src={HomeHeader.src}
-      alt="Daniel Ximénez - Header"
-      class={styles.image}
-      loading="lazy"
-    />
-  </div>
-  <a href="/bio" class={styles.button}> Conocé a Daniel </a>
-</section>
+<Header
+  client:only="react"
+  bigImage={HomeHeader.src}
+  smallImage={HomeHeaderMobile.src}
+/>
 
 <!-- Componente Programa de Gobierno de Daniel Ximénez -->
-<section class={styles.section}>
-  <div class={styles.imageContainer}>
-    <img
-      src={HomePrograma.src}
-      alt="Plataforma de Gobierno"
-      class={styles.image}
-      loading="lazy"
-    />
-  </div>
-  <a href="/propuestas" class={styles.button}> Nuestras Propuestas </a>
-</section>
+<Programa
+  client:only="react"
+  bigImage={HomePrograma.src}
+  smallImage={HomeProgramaMobile.src}
+/>
 
-  <!-- Componente Sumate al Equipo -->
-  <section class={styles.section}>
-    <div class={styles.imageContainer}>
-      <img
-        src={HomeSumate.src}
-        alt="Sumate al Equipo"
-        class={styles.image}
-        loading="lazy"
-      />
-    </div>
-    <a href="/contacto" class={styles.button}> Sumate al Equipo </a>
-  </section>
+<!-- Componente Sumate al Equipo -->
+<Sumate
+  client:only="react"
+  bigImage={HomeSumate.src}
+  smallImage={HomeSumateMobile.src}
+/>
 
-    <!-- Componente Chatea con GIANA Nuestro Chatbot Inteligente -->
-    <!-- <section class={styles.section}>
+<!-- Componente Chatea con GIANA Nuestro Chatbot Inteligente -->
+<!-- <section class={styles.section}>
       <div class={styles.imageContainer}>
         <img
           src={HomeGiana.src}
@@ -67,9 +62,8 @@ import styles from "../../styles/home.module.css";
       </a>
     </section> -->
 
-
-      <!-- Componente Street Sheriff -->
-      <!-- <section class={styles.finalSection}>
+<!-- Componente Street Sheriff -->
+<!-- <section class={styles.finalSection}>
         <div class={styles.imageContainer}>
           <img
             src={HomeStreetSheriff.src}
@@ -87,8 +81,8 @@ import styles from "../../styles/home.module.css";
         </a>
       </section> -->
 
-      <!-- Componente Kanban Board -->
-      <!-- <section class={styles.finalSection}>
+<!-- Componente Kanban Board -->
+<!-- <section class={styles.finalSection}>
         <div class={styles.imageContainer}>
           <img
             src={HomeKanban.src}
@@ -106,25 +100,25 @@ import styles from "../../styles/home.module.css";
         </a>
       </section> -->
 
-      <!-- Script para las animaciones de scroll -->
-      <script>
-        // JavaScript para las animaciones de scroll
-        document.addEventListener("DOMContentLoaded", () => {
-          const sections = document.querySelectorAll(".home-section");
+<!-- Script para las animaciones de scroll -->
+<script>
+  // JavaScript para las animaciones de scroll
+  document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".home-section");
 
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                  entry.target.classList.add("visible");
-                }
-              });
-            },
-            { threshold: 0.1 }
-          );
-
-          sections.forEach((section) => {
-            observer.observe(section);
-          });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
         });
-      </script>
+      },
+      { threshold: 0.1 }
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  });
+</script>

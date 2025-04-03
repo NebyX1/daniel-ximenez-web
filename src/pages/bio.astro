@@ -11,7 +11,6 @@ const pageUrl = "https://danielximenez.info/bio/";
 ---
 
 <Layout>
-
   <!-- Meta tags SEO -->
   <title slot="title">{pageTitle}</title>
   <meta slot="head" name="description" content={pageDescription} />
@@ -55,51 +54,114 @@ const pageUrl = "https://danielximenez.info/bio/";
 
   <title slot="title">Biografía | Daniel Ximénez Intendente</title>
   <main class="min-h-screen mt-14 lg:mt-28 md:mt-32">
-    <!-- Hero Section -->
-    <section class="relative h-[70vh] bg-gradient-to-r from-[#1b2e45] to-[#253f5f] overflow-hidden">
+    <!-- Hero Section con Imagen Integrada -->
+    <section class="relative bg-gradient-to-r from-[#1b2e45] to-[#253f5f] overflow-hidden">
       <div class="absolute inset-0">
         <Image
           src={NaturalezaImg}
           alt="Cerro Arequita"
-          class="w-full h-full object-cover opacity-25 scale-105 hover:scale-110 transition-transform duration-700"
+          class="w-full h-full object-cover opacity-20 scale-105 hover:scale-110 transition-transform duration-700"
         />
       </div>
-      <div 
-        class="absolute inset-0 bg-gradient-to-t from-[#253f5f]/80 via-transparent to-transparent">
-      </div>
-      <div class="relative container mx-auto px-6 h-full flex flex-col justify-center">
-        <h1 class="text-5xl md:text-7xl font-bold text-white max-w-3xl leading-tight">
-          <span class="text-[#ffde59]">Conocé</span> a Daniel Ximénez
-        </h1>
-        <p class="text-xl md:text-2xl text-white/90 mt-4 max-w-2xl">
-          Construyendo juntos un Lavalleja de Primera
-        </p>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#253f5f]/80 via-transparent to-transparent"></div>
+      
+      <div class="relative container mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center">
+        <!-- Contenido de texto del hero -->
+        <div class="md:w-1/2 z-10 md:pr-8">
+          <h1 class="text-5xl md:text-6xl font-bold text-white max-w-3xl leading-tight mb-6">
+            <span class="text-white">Conocé</span> a Daniel Ximénez
+          </h1>
+          <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl">
+            Construyendo juntos un Lavalleja de Primera
+          </p>
+          <div class="hidden md:block">
+            <span class="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white border border-white/20 shadow-lg mb-2">Médico Cirujano</span>
+            <span class="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white border border-white/20 shadow-lg ml-2 mb-2">Ex-Director Hospital de Minas</span>
+            <span class="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white border border-white/20 shadow-lg mr-2 mb-2">Formación de Posgrado en Administración</span>
+          </div>
+        </div>
+        
+        <!-- Imagen integrada en el hero -->
+        <div class="relative md:w-1/2 mt-8 md:mt-0 z-10">
+          <div class="relative overflow-hidden rounded-[2.5rem] md:rounded-[5rem] shadow-2xl border-8 border-white/5 backdrop-blur-sm max-w-md mx-auto transform transition-all duration-500 hover:scale-[1.02]">
+            <!-- Gradiente que se superpone a la imagen para integrarla -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#253f5f]/30 to-transparent mix-blend-overlay z-10"></div>
+            
+            <Image
+              src={DanielBig}
+              alt="Daniel Ximénez"
+              class="w-full h-auto"
+            />
+            
+            <!-- Elemento decorativo que integra la imagen con el fondo -->
+            <div class="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-[#253f5f] to-transparent opacity-40"></div>
+          </div>
+          
+          <!-- Círculos decorativos que ayudan a integrar -->
+          <div class="absolute -top-6 -right-6 w-24 h-24 bg-[#3a5e89]/40 rounded-full blur-xl"></div>
+          <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-[#203752]/30 rounded-full blur-xl"></div>
+        </div>
       </div>
     </section>
 
-    <!-- Bio Content -->
+    <!-- Bio Content con nuevo diseño -->
     <section class="py-16 md:py-24 bg-white">
       <div class="container mx-auto px-4 md:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
-          <!-- Sidebar -->
-          <div class="md:col-span-4 lg:col-span-4">
-            <div class="sticky top-24">
-              <div class="relative mb-8 group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-[#e2e0e0] to-[#ffffff] rounded-lg blur opacity-25 group-hover:opacity-70 transition duration-1000 group-hover:duration-300"></div>
-                <Image
-                  src={DanielBig}
-                  alt="Daniel Ximénez"
-                  class="relative w-full rounded-lg shadow-2xl transform transition-transform duration-500 group-hover:scale-[1.01]"
-                />
-              </div>
-              <div class="bg-gradient-to-br from-[#ffde59] to-[#ffd21a] p-7 rounded-xl shadow-lg transform hover:shadow-xl transition-all duration-300">
-                <h3 class="text-[#253f5f] font-bold text-2xl mb-5 flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- Trayectoria en cards horizontales (visible en móvil) -->
+        <div class="md:hidden grid grid-cols-1 gap-4 mb-12">
+          <h3 class="text-[#253f5f] font-bold text-2xl mb-4">Trayectoria Destacada</h3>
+          <div class="bg-gradient-to-br from-white to-[#f5f5f7] p-4 rounded-xl shadow-sm flex items-center">
+            <div class="bg-[#253f5f]/10 p-2 rounded-full mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#253f5f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="text-[#253f5f] font-medium">Médico Cirujano</span>
+          </div>
+          <div class="bg-gradient-to-br from-white to-[#f5f5f7] p-4 rounded-xl shadow-sm flex items-center">
+            <div class="bg-[#253f5f]/10 p-2 rounded-full mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#253f5f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="text-[#253f5f] font-medium">Ex-Director Hospital de Minas (2005-2014)</span>
+          </div>
+          <div class="bg-gradient-to-br from-white to-[#f5f5f7] p-4 rounded-xl shadow-sm flex items-center">
+            <div class="bg-[#253f5f]/10 p-2 rounded-full mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#253f5f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="text-[#253f5f] font-medium">Formación de Posgrado en Administración de Centros de Salud</span>
+          </div>
+          <div class="bg-gradient-to-br from-white to-[#f5f5f7] p-4 rounded-xl shadow-sm flex items-center">
+            <div class="bg-[#253f5f]/10 p-2 rounded-full mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[#253f5f]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <span class="text-[#253f5f] font-medium">Presidente del Frente Amplio Lavalleja</span>
+          </div>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl md:text-5xl font-bold text-[#253f5f] mb-8 relative">
+            Biografía de Daniel
+            <div class="h-1 w-32 bg-[#253f5f]/20 mt-4 rounded-full"></div>
+          </h2>
+
+          <!-- Primera parte de la bio con imagen flotante a la derecha -->
+          <div class="relative mb-12">
+            <div class="md:float-right md:ml-8 md:mb-4 md:w-1/3 md:-mt-12 lg:-mt-20 mb-6">
+              <!-- Trayectoria destacada en desktop (flotante) -->
+              <div class="hidden md:block bg-gradient-to-br from-white to-[#f5f5f7] p-6 rounded-xl shadow-lg transform hover:shadow-xl transition-all duration-300 mb-8">
+                <h3 class="text-[#253f5f] font-bold text-xl mb-4 flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                   Trayectoria Destacada
                 </h3>
-                <ul class="space-y-4 text-[#253f5f] font-medium">
+                <ul class="space-y-3 text-[#253f5f] font-medium">
                   <li class="flex items-start">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#253f5f] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -116,7 +178,7 @@ const pageUrl = "https://danielximenez.info/bio/";
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#253f5f] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <span>Cursó Posgrado en Administración de Centros de Salud</span>
+                    <span>Formación de Posgrado en Administración de Centros de Salud</span>
                   </li>
                   <li class="flex items-start">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#253f5f] mt-1 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -127,87 +189,83 @@ const pageUrl = "https://danielximenez.info/bio/";
                 </ul>
               </div>
             </div>
+
+            <p class="text-xl leading-relaxed mb-8 text-gray-700">
+              Daniel Ximénez nació y creció en Minas, capital de Lavalleja.
+              Desde chico, en el barrio La Rambla, aprendió el valor de la
+              comunidad y el trabajo en equipo. Se formó en la <span class="font-semibold">Escuela N° 1</span> y
+              en el <span class="font-semibold">Liceo Departamental N° 1 Eduardo Fabini</span>, afianzando su
+              compromiso con el estudio. Entre la ciudad y el campo, ya que
+              pasaba largas vacaciones en la propiedad rural de sus abuelos,
+              aprendió a ver la parte dura, pero también la belleza de la vida
+              en el campo, forjando en él el respeto por el esfuerzo, la
+              humildad y nuestras tradiciones.
+            </p>
+
+            <div class="clear-both"></div>
           </div>
 
-          <!-- Main Content -->
-          <div class="md:col-span-8 lg:col-span-8">
-            <div class="prose prose-lg max-w-none">
-              <h2 class="text-4xl md:text-5xl font-bold text-[#253f5f] mb-8 relative">
-                Bio de Daniel
-                <span class="block h-1 w-24 bg-[#ffde59] mt-4"></span>
-              </h2>
+          <div class="bg-gradient-to-r from-[#f9f9f9] to-[#f0f0f0] p-8 rounded-xl my-12 border-l-4 border-[#253f5f]/20 shadow-sm">
+            <p class="text-2xl font-semibold text-[#253f5f] italic">
+              "El éxito se construye en equipo y no hay desafío insuperable cuando se junta gente comprometida."
+            </p>
+          </div>
 
-              <p class="text-xl leading-relaxed mb-8 text-gray-700">
-                Daniel Ximénez nació y creció en Minas, capital de Lavalleja.
-                Desde chico, en el barrio La Rambla, aprendió el valor de la
-                comunidad y el trabajo en equipo. Se formó en la <span class="font-semibold">Escuela N° 1</span> y
-                en el <span class="font-semibold">Liceo Departamental N° 1 Eduardo Fabini</span>, afianzando su
-                compromiso con el estudio. Entre la ciudad y el campo, ya que
-                pasaba largas vacaciones en la propiedad rural de sus abuelos,
-                aprendió a ver la parte dura, pero también la belleza de la vida
-                en el campo, forjando en él el respeto por el esfuerzo, la
-                humildad y nuestras tradiciones.
-              </p>
+          <p class="text-xl leading-relaxed mb-8 text-gray-700">
+            Movido por el deseo de servir a su gente, se trasladó a
+            Montevideo para estudiar Medicina en la <span class="font-semibold">Universidad de la
+            República</span>, donde se graduó como médico y se especializó en
+            cirugía. No tardó en meterse a la docencia universitaria,
+            compartiendo su experiencia con futuros profesionales y
+            aprendiendo de ellos. Para entender mejor la administración en
+            salud, realizó un <span class="font-semibold">posgrado en Administración de Centros de
+            Salud</span>, convencido de que una gestión eficiente y con
+            conocimiento es esencial para ofrecer un servicio de calidad.
+          </p>
 
-              <div class="bg-gradient-to-r from-[#f9f9f9] to-[#f0f0f0] p-8 rounded-xl my-12 border-l-4 border-[#ffde59] shadow-sm">
-                <p class="text-2xl font-semibold text-[#253f5f] italic">
-                  "El éxito se construye en equipo y no hay desafío insuperable cuando se junta gente comprometida."
-                </p>
-              </div>
+          <p class="text-xl leading-relaxed mb-8 text-gray-700">
+            Durante casi diez años, estuvo al mando del <span class="font-semibold">Hospital de Minas
+            (2005-2014)</span>, trabajando sin pausa para mejorar la atención en su
+            tierra, aplicando medidas para regularizar la situación de
+            muchos funcionarios y profesionalizando los servicios. Hoy forma
+            parte de la <span class="font-semibold">Comisión Directiva del Sanatorio de Minas</span> y tuvo la
+            oportunidad de presidir el Frente Amplio de Lavalleja. Su camino
+            le demostró que el éxito se construye en equipo y que no hay
+            desafío insuperable cuando se junta gente comprometida.
+          </p>
 
-              <p class="text-xl leading-relaxed mb-8 text-gray-700">
-                Movido por el deseo de servir a su gente, se trasladó a
-                Montevideo para estudiar Medicina en la <span class="font-semibold">Universidad de la
-                República</span>, donde se graduó como médico y se especializó en
-                cirugía. No tardó en meterse a la docencia universitaria,
-                compartiendo su experiencia con futuros profesionales y
-                aprendiendo de ellos. Para entender mejor la administración en
-                salud, realizó un <span class="font-semibold">posgrado en Administración de Centros de
-                Salud</span>, convencido de que una gestión eficiente y con
-                conocimiento es esencial para ofrecer un servicio de calidad.
-              </p>
+          <h3 class="text-3xl font-bold text-[#253f5f] mt-16 mb-8">
+            La Visión de Daniel para Lavalleja
+          </h3>
+          
+          <p class="text-xl leading-relaxed mb-10 text-gray-700">
+            El sueño de Daniel es ver a Lavalleja como modelo a seguir en
+            todo Uruguay, un departamento donde la industria crezca, los
+            jóvenes encuentren oportunidades y cada rincón se llene de
+            orgullo y esperanza. Su apuesta es por una <span class="font-semibold">gestión abierta,
+            participativa y transparente</span>, donde cada vecino cuente y las
+            soluciones se forjen de la mano, con la garra y el sentir de un
+            pueblo que sabe lo que quiere.
+          </p>
 
-              <p class="text-xl leading-relaxed mb-8 text-gray-700">
-                Durante casi diez años, estuvo al mando del <span class="font-semibold">Hospital de Minas
-                (2005-2014)</span>, trabajando sin pausa para mejorar la atención en su
-                tierra, aplicando medidas para regularizar la situación de
-                muchos funcionarios y profesionalizando los servicios. Hoy forma
-                parte de la <span class="font-semibold">Comisión Directiva del Sanatorio de Minas</span> y tuvo la
-                oportunidad de presidir el Frente Amplio de Lavalleja. Su camino
-                le demostró que el éxito se construye en equipo y que no hay
-                desafío insuperable cuando se junta gente comprometida.
-              </p>
-
-              <h3 class="text-3xl font-bold text-[#253f5f] mt-16 mb-8">
-                La Visión de Daniel para Lavalleja
-              </h3>
-              
-              <p class="text-xl leading-relaxed mb-8 text-gray-700">
-                El sueño de Daniel es ver a Lavalleja como modelo a seguir en
-                todo Uruguay, un departamento donde la industria crezca, los
-                jóvenes encuentren oportunidades y cada rincón se llene de
-                orgullo y esperanza. Su apuesta es por una <span class="font-semibold">gestión abierta,
-                participativa y transparente</span>, donde cada vecino cuente y las
-                soluciones se forjen de la mano, con la garra y el sentir de un
-                pueblo que sabe lo que quiere.
-              </p>
-
-              <!-- Sección final -->
-              <div class="bg-gradient-to-r from-[#253f5f] to-[#1d304c] text-white p-10 rounded-xl mt-16 shadow-lg transform hover:scale-[1.01] transition-transform duration-300">
-                <h4 class="text-3xl font-bold mb-6 flex items-center">
-                  <span class="text-[#ffde59] mr-2">Compromiso</span> con el Futuro
+          <!-- Sección final -->
+          <div class="bg-gradient-to-r from-[#253f5f] to-[#1d304c] text-white p-10 rounded-xl mt-16 shadow-lg transform hover:scale-[1.01] transition-transform duration-300">
+            <div class="flex flex-col md:flex-row gap-8 items-center">
+              <div class="md:w-9/12">
+                <h4 class="text-3xl font-bold mb-6">
+                  Compromiso con el Futuro
                 </h4>
                 <p class="text-xl leading-relaxed">
                   Este no es solo un proyecto político; es una misión de vida.
                   Sé que, unidos, podemos llevar a Lavalleja a ser el número uno
                   en Uruguay. Un Lavalleja de primera es posible, y comienza con
-                  nosotros. <span class="text-[#ffde59] font-bold">¡Hagámoslo realidad!</span>
+                  nosotros. <span class="text-white font-bold">¡Hagámoslo realidad!</span>
                 </p>
-                <div class="mt-8">
-                  <a href="/contacto" class="inline-block bg-[#ffde59] text-[#253f5f] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#ffd21a] hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
-                    + Sumate al Equipo
-                  </a>
-                </div>
+              </div>
+              <div class="md:w-3/12 flex justify-center md:justify-end">
+                <a href="/contacto" class="inline-block bg-white text-[#253f5f] px-8 py-4 rounded-full text-lg font-bold hover:bg-[#eeedf0] hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                  + Sumate al Equipo
+                </a>
               </div>
             </div>
           </div>
