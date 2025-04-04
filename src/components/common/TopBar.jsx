@@ -1,5 +1,6 @@
 import React from "react";
 import { FaWhatsapp, FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6"; // Importar ícono de X (Twitter)
 
 const TopBar = () => {
   return (
@@ -41,6 +42,15 @@ const TopBar = () => {
           rel="noopener noreferrer"
         >
           <FaInstagram size={20} />
+        </a>
+        <a
+          href="https://x.com/DanielXimenez25"
+          className="text-[white] hover:scale-110 transition-transform"
+          aria-label="X (Twitter)"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaXTwitter size={20} />
         </a>
       </div>
     </div>

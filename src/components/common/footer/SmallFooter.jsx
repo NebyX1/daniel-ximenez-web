@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaWhatsapp, FaFacebookF, FaYoutube, FaInstagram, FaHeart } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6' // Importar ícono de X (Twitter)
 
 const SmallFooter = () => {
   return (
@@ -37,6 +38,14 @@ const SmallFooter = () => {
           className="hover:text-pink-500 transition-colors duration-300"
         >
           <FaInstagram size={20} />
+        </a>
+        <a
+          href="https://x.com/DanielXimenez25"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-gray-400 transition-colors duration-300"
+        >
+          <FaXTwitter size={20} />
         </a>
       </div>
       

@@ -6,27 +6,22 @@ import {
   FaInstagram,
   FaHeart,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6"; // Importar ícono de X (Twitter)
 import styles from "../../../styles/bigfooter.module.css";
+import InstagramFeed from "./InstagramFeed";
 
 const BigFooter = () => {
   return (
     <footer className="bg-[#253f5f] text-white px-8 py-10">
       {/* Contenedor principal con ancho máximo y columnas */}
-      <div className="max-w-6xl mx-auto grid grid-cols-3 gap-8">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Columna 1: Información */}
         <div className="flex flex-col space-y-4">
-          <h2 className="text-2xl font-bold">¿Por qué Daniel Ximénez?</h2>
-          <p className="text-sm leading-relaxed">
-            Daniel Ximénez representa la mejor opción para el progreso y
-            desarrollo de Lavalleja. Su compromiso con la transparencia, la
-            innovación y la honestidad, junto a una Plataforma de Gobierno sólido y
-            propuestas concretas, garantiza el futuro que nuestra comunidad
-            merece. Con un enfoque participativo y un equipo dedicado, Daniel
-            trabaja día a día para que cada vecino sea parte activa de la
-            transformación de Lavalleja.
-          </p>
+          <h2 className="text-2xl font-bold">Últimas novedades</h2>
+          <InstagramFeed />
         </div>
-        {/* Columna 2: Enlaces útiles (ejemplo) */}
+
+        {/* Columna 2: Enlaces útiles */}
         <div className="flex flex-col space-y-4">
           <h2 className="text-2xl font-bold">Enlaces</h2>
           <ul className="text-sm space-y-2">
@@ -40,16 +35,6 @@ const BigFooter = () => {
                 +Sumate al Equipo
               </a>
             </li>
-            {/* <li>
-              <a href="https://giana-ai.streamlit.app/" target="_blank" className="hover:underline">
-                Chatea con GIANA
-              </a>
-            </li>
-            <li>
-              <a href="https://street-sheriff.netlify.app/" target="_blank" className="hover:underline">
-                Street Sheriff
-              </a>
-            </li> */}
           </ul>
         </div>
 
@@ -92,20 +77,27 @@ const BigFooter = () => {
             >
               <FaInstagram size={22} />
             </a>
+            <a
+              href="https://x.com/DanielXimenez25"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400 transition-colors duration-300"
+            >
+              <FaXTwitter size={22} />
+            </a>
           </div>
         </div>
       </div>
 
       {/* Línea divisoria y mensaje inferior */}
       <div className="max-w-6xl mx-auto mt-6 border-t border-gray-600 pt-4 flex flex-col lg:flex-row items-center justify-between space-y-2 lg:space-y-0">
-        {/* Mensaje de derechos y autoría */}
         <div className="text-sm">
           Hecho en Lavalleja con <FaHeart className="inline text-red-500" /> por
           el Equipo de Daniel &copy; {new Date().getFullYear()}
         </div>
-
-        {/* Ejemplo: puedes colocar aquí alguna frase o sublinks */}
-        <div className="text-sm text-gray-300">"Con Daniel Lavalleja <span className={`text-xl ${styles.logoFont}`}>Si!</span>"</div>
+        <div className="text-sm text-gray-300">
+          "Con Daniel Lavalleja <span className={`text-xl ${styles.logoFont}`}>Si!</span>"
+        </div>
       </div>
     </footer>
   );
